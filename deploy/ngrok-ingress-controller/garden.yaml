@@ -1,0 +1,13 @@
+kind: Deploy
+type: helm
+name: ngrok-ingress-controller
+spec:
+  namespace: ngrok-ingress-controller
+  chart:
+    name: kubernetes-ingress-controller
+    repo: https://ngrok.github.io/kubernetes-ingress-controller
+    version: "0.10.0"
+  values:
+    credentials:
+      authtoken: ${var.NGROK_AUTHTOKEN}
+      apiKey: ${var.NGROK_API_KEY}

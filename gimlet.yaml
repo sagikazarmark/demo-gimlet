@@ -1,0 +1,17 @@
+env: "infinite-cherry"
+app: "gimlet-inspired-coral"
+namespace: "default"
+values:
+  gitSha: "{{ .SHA }}"
+  gitRepository: "sagikazarmark/gimlet-inspired-coral"
+  image:
+    repository: "ghcr.io/sagikazarmark/gimlet-inspired-coral"
+    tag: "{{ .BRANCH }}-{{ .SHA }}"
+  containerPort: 8080
+chart:
+  repository: "https://chart.onechart.dev"
+  name: "onechart"
+  version: "0.57.0"
+deploy:
+  branch: "*"
+  event: "push"

@@ -1,0 +1,6 @@
+/.devenv/
+/.direnv/
+/.env
+/.garden/
+
+/deploy/gimlet/ingress.patch.yaml

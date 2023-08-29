@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gimlet
+data:
+  API_HOST: "http://gimlet.gimlet.svc.cluster.local:9000"

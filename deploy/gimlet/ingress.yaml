@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: gimlet
+spec:
+  ingressClassName: ngrok
+  rules:
+    - host: NGROK_DOMAIN
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: gimlet
+                port:
+                  number: 9000
